@@ -1,0 +1,34 @@
+[
+    {
+      "pk": 1,
+      "model": "products.category",
+      "fields": {
+        "name": "weight_training",
+        "friendly_name": "Weights Training"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "products.category",
+      "fields": {
+        "name": "Crossfit",
+        "friendly_name": "CrossFit"
+      }
+    },
+    {
+      "pk": 3,
+      "model": "products.category",
+      "fields": {
+        "name": "calisthenics",
+        "friendly_name": "Calisthenics"
+      }
+    },
+    {
+      "pk": 4,
+      "model": "products.category",
+      "fields": {
+        "name": "running",
+        "friendly_name": "Running"
+      }
+    }
+  ]

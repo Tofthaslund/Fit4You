@@ -1,0 +1,170 @@
+[
+    {
+      "pk": 1,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp5001340155",
+        "name": "Beginner's Weight Programme",
+        "description": "This programme is specially designed for both men and women who wish to start weight training. It includes the basic exercises you need to do, in order to start building muscle. The schedule is simple",
+        "price": 29.95,
+        "category": 1,
+        "rating": 4.6,
+        "image_url": "https://unsplash.com/photos/zEAX0E0KJxs",
+        "image": "1.jpg"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp5001340156",
+        "name": "Weight traning for Intermediate",
+        "description": "You have a basic understanding of how to squat, bench, and deadlift. You know the importance of proper form for each lift. You're looking for a program that will get you strong at those lifts. This is it!",
+        "price": 39.99,
+        "category": 1,
+        "rating": 4.5,
+        "image_url": "https://unsplash.com/photos/79nVN_Cmj3o",
+        "image": "2.jpg"
+      }
+    },
+    {
+      "pk": 3,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp5001340157",
+        "name": "Weight traning for the Experts",
+        "description": "This programme is for people that has been training for years and years, and want to give themself the best program possible to reach their goals",
+        "price": 59.99,
+        "category": 1,
+        "rating": 4.8,
+        "image_url": "https://unsplash.com/photos/_tIBef8zGGA",
+        "image": "3.jpg"
+      }
+    },
+    {
+      "pk": 4,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp5001340159",
+        "name": "Crossfit for beginners",
+        "description": "Crossfit is the most popular strength and conditioning program in the world. Achieving a well-rounded fitness, while doing one of our fun workouts, leads to increased functional strength and flexibility. Our online program has everything you need to get started with crossfit at home, learn proper form on every exercise, track your progress over time and give you access to our coaches through live chat.",
+        "price": 19.99,
+        "category": 2,
+        "rating": 4.8,
+        "image_url": "https://unsplash.com/photos/WIPIAJW2-P8",
+        "image": "crossfit1.jpg"
+      }
+    },
+    {
+      "pk": 5,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp5001340160",
+        "name": "Crossfit for Intermediate",
+        "description": "Crossfit is an intense fitness program that uses a combination of gymnastics, calisthenics (body weight exercises), Olympic weightlifting and other functional movements performed at high intensity. The CrossFit program has been developed by designing hundreds of different workouts with a large number of variations. These workouts are called 'Workouts of the Day' or WODs. The user selects a workout from a page on the website and performs it from the",
+        "price": 35.00,
+        "category": 2,
+        "rating": 4.8,
+        "image_url": "https://unsplash.com/photos/h4i9G-de7Po",
+        "image": "crossfit2.jpg"
+      }
+    },
+    {
+      "pk": 6,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp5001340161",
+        "name": "Crossfit for Experts",
+        "description": "CrossFit is a training methodology that focuses on high intensity functional movements. CrossFit offers classes to the public for those who want to take their fitness to the next level. This programe are fot those their want to start going to Crossfit events and competing against the very best",
+        "price": 90.00,
+        "category": 2,
+        "rating": 4.8,
+        "image_url": "https://unsplash.com/photos/0HlI76m4jxU",
+        "image": "crossfit3.jpg"
+      }
+    },
+    {
+      "pk": 7,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp5001340162",
+        "name": "Calisthenics at home",
+        "description": "Calisthenics is a fitness training method developed by author and athlete Calum von Moger that requires no equipment to get in shape. It's the easiest way to get into incredible shape, while saving time and money. Thousands of people worldwide have already achieved their goals using Calisthenics, and you can too!",
+        "price": 90.00,
+        "category": 3,
+        "rating": 4.8,
+        "image_url": "https://unsplash.com/photos/ozSG9X4Av6A",
+        "image": "calisthenics1.jpg"
+      }
+    },
+    {
+      "pk": 8,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp5001340162",
+        "name": "Calisthenics Next Level",
+        "description": "Calisthenics is the best way to stay fit in 2021. It's about strength, movement and body control. It's not just a workout but it's a lifestyle that teaches you how use your body to the fullest.",
+        "price": 90.00,
+        "category": 3,
+        "rating": 4.8,
+        "image_url": "https://unsplash.com/photos/j1G32s6pvR8",
+        "image": "calisthenics2.jpg"
+      }
+    },
+    {
+      "pk": 9,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp5001340162",
+        "name": "Calisthenics All Out",
+        "description": "Calisthenics is a simple and effective training system that builds strength, agility and endurance. It's a great alternative to traditional weight-lifting or bodybuilding. There are also no expensive gym memberships required, since all you need is your own bodyweight.",
+        "price": 90.00,
+        "category": 3,
+        "rating": 4.8,
+        "image_url": "https://unsplash.com/photos/j1G32s6pvR8",
+        "image": "calisthenics3.jpg"
+      }
+    },
+    {
+      "pk": 10,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp5001340163",
+        "name": "Running Short",
+        "description": "Running program for short distance. Go from 0 to 5km in 6 weeks.",
+        "price": 90.00,
+        "category": 4,
+        "rating": 4.8,
+        "image_url": "https://unsplash.com/photos/PHIgYUGQPvU",
+        "image": "running1.jpg"
+      }
+    },
+    {
+      "pk": 11,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp5001340164",
+        "name": "Running 10-12km",
+        "description": "Running program for people that wants to push themself to the 10k mark and keep getting better.",
+        "price": 90.00,
+        "category": 4,
+        "rating": 4.8,
+        "image_url": "https://unsplash.com/photos/oGv9xIl7DkY",
+        "image": "running2.jpg"
+      }
+    },
+    {
+      "pk": 12,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp5001340165",
+        "name": "Marathon Ready",
+        "description": "This is the perfect program for anyone that wants to get ready for their first marathon",
+        "price": 90.00,
+        "category": 4,
+        "rating": 4.8,
+        "image_url": "https://unsplash.com/photos/NPFu4GfFZ7E",
+        "image": "running3.jpg"
+      }
+    }
+  ]
