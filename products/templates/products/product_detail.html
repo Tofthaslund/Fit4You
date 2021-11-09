@@ -34,6 +34,13 @@
                 <div class="product-details-container mb-5 mt-md-5">
                     <p class="mb-0">{{ product.name }}</p>
                     <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                    {% if product.category %}
+                        <p class="small mt-1 mb-0">
+                            <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+                                <img src="https://img.icons8.com/fluency/20/000000/tag.png"/>{{ product.category.friendly_name }}
+                            </a>
+                        </p>
+                    {% endif %}
                     {% if product.rating %}
                         <small class="text-muted"><img class="mr-1" src="https://img.icons8.com/fluency/20/000000/star.png"/>{{ product.rating }} / 5</small>
                     {% else %}
