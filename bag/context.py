@@ -29,7 +29,7 @@ def bag_contents(request):
                 bag_items.append({
                     'item_id': item_id,
                     'quantity': quantity,
-                    'product': item_data,
+                    'product': product,
                     'size': size,
                 })
 
