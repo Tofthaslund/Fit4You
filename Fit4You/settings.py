@@ -47,8 +47,9 @@ INSTALLED_APPS = [
     'products',
     'bag',
     'checkout',
-    
-    #Other
+    'profiles',
+
+    # Other
     'crispy_forms',
 ]
 
@@ -173,7 +174,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 
-# Stripe 
+# Stripe
 FREE_DELIVERY_THRESHOLD = 100
 STANDARD_DELIVERY_PERCENTAGE = 10
 STRIPE_CURRENCY = 'gbp'
