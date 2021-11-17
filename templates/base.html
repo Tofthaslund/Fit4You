@@ -59,7 +59,7 @@
                                 {% if request.user.is_superuser %}
                                     <a href="" class="dropdown-item">Product Management</a>
                                 {% endif %}
-                                <a href="" class="dropdown-item">My Profile</a>
+                                <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                             {% else %}
                                 <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
@@ -125,7 +125,7 @@
     {% block content %}
     {% endblock %}
 
-    <footer class="bg-dark text-white">
+    <footer class="bg-dark text-white fixed-bottom">
         <div class="footer-top">
             <div class="container">
                 <div class="row">
@@ -144,10 +144,10 @@
                         <h2>Social Media</h2>
                         <p>Follow our social media for updates</p>
                         <ul class="list-unstyled d-lg-flex">
-                            <li class="m-1"><a href="https://www.facebook.com" target="_blank"><img src="https://img.icons8.com/fluency/40/000000/facebook-new.png"/></a></li>
-                            <li class="m-1"><a href="https://www.twitter.com" target="_blank"><img src="https://img.icons8.com/fluency/40/000000/twitter.png"/></a></li>
-                            <li class="m-1"><a href="https://www.youtube.com" target="_blank"><img src="https://img.icons8.com/fluency/40/000000/youtube-play.png"/></i></a></li>
-                            <li class="m-1"><a href="https://www.instagram.com" target="_blank"><img src="https://img.icons8.com/color/40/000000/instagram-new--v1.png"/></a></li>
+                            <li class="m-1"><a href="https://www.facebook.com" target="_blank"><img src="https://img.icons8.com/fluency/50/000000/facebook-new.png"/></a></li>
+                            <li class="m-1"><a href="https://www.twitter.com" target="_blank"><img src="https://img.icons8.com/fluency/50/000000/twitter.png"/></a></li>
+                            <li class="m-1"><a href="https://www.youtube.com" target="_blank"><img src="https://img.icons8.com/fluency/50/000000/youtube-play.png"/></i></a></li>
+                            <li class="m-1"><a href="https://www.instagram.com" target="_blank"><img src="https://img.icons8.com/color/50/000000/instagram-new--v1.png"/></a></li>
                         </ul>
                     </div>
                     <div class="col-med-3 col-sm-6 col-xs-12 segment-tree"></div>
