@@ -194,12 +194,21 @@
         </div>
         <div class="row">
 			<div class="col-12 col-lg-7 text-right">
-				<a href="{% url 'products' %}" class="btn btn-primary rounded-0 my-2">
-					<span class="icon mr-2">
-						<img src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/30/000000/external-dumbell-morning-routine-flatart-icons-lineal-color-flatarticons.png"/>
-					</span>
-					<span class="text-uppercase">Now check other programs!</span>
-				</a>
+                {% if from_profile %}
+                    <a href="{% url 'profile' %}" class="btn btn-primary rounded-0 my-2">
+                        <span class="icon mr-2">
+                            
+                        </span>
+                        <span class="text-uppercase">Back to profile</span>
+                    </a>
+                {% else %}
+                    <a href="{% url 'products' %}" class="btn btn-primary rounded-0 my-2">
+                        <span class="icon mr-2">
+                            <img src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/30/000000/external-dumbell-morning-routine-flatart-icons-lineal-color-flatarticons.png"/>
+                        </span>
+                        <span class="text-uppercase">Now check other programs!</span>
+                    </a>
+                {% endif %}
 			</div>
 		</div>
     </div>
