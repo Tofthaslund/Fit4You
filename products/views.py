@@ -71,10 +71,22 @@ def product_detail(request, product_id):
 
 def add_product(request):
     # For superuser to add products to store
-    form = ProductForm()
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added product to the store')
+            return redirect(reverse('add_product'))
+        else:
+            messages.error(request, 'Failed to upload product. Please check form for errors')
+    else:
+        form = ProductForm()
+    
     template = 'products/add_product.html'
     context = {
         'form': form
     }
 
     return render(request, template, context)
+
+
