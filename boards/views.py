@@ -1,7 +1,12 @@
 from django.shortcuts import render
 
-# Create your views here.
+from django.views.generic import ListView
 
 
-def board(request):
-    return render((request), 'boards/boards.html')
+from .models import Board
+
+
+class BoardListView(ListView):
+    Model = Board
+    Context_object_name = 'boards'
+    template_name = 'boards/boards.html'
