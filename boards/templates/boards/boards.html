@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% load humanize %}
 
 {% block page_header %}
     <div class="container-fluid header-container bg-black">
@@ -8,7 +8,7 @@
             <div class="col"></div>
         </div>
     </div>
-{% endblock%}
+{% endblock %}
 
 {% block content %}
     <div class="overlay"></div>
@@ -28,20 +28,46 @@
                             <th>Board</th>
                             <th>Posts</th>
                             <th>Topics</th>
-                            <th>Lase Post</th>
+                            <th>Last Post</th>
                         </tr>
                     </thead>
                     <tbody>
                         {% for board in boards %}
                             <tr>
                             <td>
-                                
+                                <a href="{% url 'board_topics' board.pk %}" class="text-decoration-none text-white font-weight-bold">{{ board.name }}</a>
+                                <small  class="text-muted d-block">{{ board.description }}
+                                    <!-- Show delete board link to superuser -->
+                                    {% if request.user.is_superuser %}
+                                    <a class="text-danger" href="{% url 'delete_board' board.id %}">Delete</a>
+                                    {% endif %}
+                                </small>
+                            </td>
+                            <td class="align-middle">
+                                {{ board.get_posts_count }}
+                            </td>
+                            <td class="align-middle">
+                                {{ board.topics.count }}
+                            </td>
+                            <td class="align-middle">
+                                {% with post=board.get_last_post %}
+                                {% if post %}
+                                    <small>
+                                        <a href="{% url 'topic_posts' board.pk post.topic.pk %}">
+                                            By {{ post.created_by.username }} {{ post.created_at|naturaltime }}
+                                        </a>
+                                    </small>
+                                {% else %}
+                                    <small class="text-muted text-black">
+                                        <em>No posts yet.</em>
+                                    </small>
+                                {% endif %}
+                                {% endwith %}
                             </td>
                             </tr>
                         {% endfor %}
                     </tbody>
                 </table>
-
             </div>
         </div>
     </div>

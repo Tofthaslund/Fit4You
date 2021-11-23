@@ -10,7 +10,7 @@ register = template.Library()
 
 @register.filter
 def gravatar(user):
-    email = user.email.lower().encode('uft-8')
+    email = user.email.lower().encode('utf-8')
     default = 'mmm'
     size = 256
     url = 'https://www.gravatar.com/avatar/{md5}?{params}'.format(

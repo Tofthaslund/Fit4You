@@ -10,6 +10,10 @@
     </div>
 {% endblock %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/simplemde.min.css' %}">
+{% endblock %}
+
 {% block content %}
     <div class="overlay"></div>
         <div class="container-fluid pb-5 bg-black">
@@ -18,7 +22,7 @@
 
                     <div class="row">
                         <div class="col text-center">
-                            <h2 class="logo-font mb-4 text-black">New Topic</h2>
+                            <h2 class="logo-font mb-4 text-black">Edit Post</h2>
                         </div>
                     </div>
 
@@ -26,9 +30,18 @@
                         {% csrf_token %}
                         {% include 'includes/form.html' %}
                         <button type="submit" class="btn btn-info border border-blue rounded">Post Topic</button>
+                        <a href="{% url 'topic_posts' post.topic.board.pk post.topic.pk %}" class="btn btn-info border border-black rounded" role="button">Cancel</a>
                     </form>
 
                 </div>
             </div>
         </div>
+{% endblock %}
+
+
+{% block extra_js %}
+    <script src="{% static 'js/simplemde.min.js' %}"></script>
+    <script type="text/javascript">
+        var simplemde = new SimpleMDE();
+    </script>
 {% endblock %}
