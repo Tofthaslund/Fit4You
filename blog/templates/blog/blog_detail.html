@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block page_header %}
+    <div class="container-fluid header-container bg-white">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+        <div class="container-fluid pb-5 bg-white">
+            <div class="row">
+                <div class="col-10 col-lg-8 mt-3 mx-auto">
+
+                   <div class="row">
+                       <div class="col text-center">
+                           <h2 class="logo-font mb-4 text-black">{{ blog.title }}</h2>
+                       </div>
+                   </div>
+
+                   <!-- Full blog  -->
+                   <div class="row">
+                       <div class="col-12 col-md-4 mx-auto pb-3">
+                           <img class="img-fluid border border-black" src="{{ blog.image.url }}">
+                       </div>
+
+                       <div class="col-12 col-md-8">
+                           <p class="text-muted">Posted By: {{ blog.author }} | {{ blog.date }}</p>
+                           <p> {{ blog.body }}</p> 
+
+                           <!-- Show edit / delete blogs links to superusers -->
+                            {% if request.user.is_superuser %}
+                            <small>
+                                <a href="#">Edit</a>
+                                <a class="text-danger font-weight-bold" href="#">Delete</a>
+                            </small>
+                            {% endif %}
+                       </div>
+
+                   </div>
+                   
+                   <div>
+                       <a href="{% url 'blog' %}" class="btn btn-info btn-lg border border-black rounded" role="button" aria-disabled="true">Back to Blog</a>
+                   </div>
+
+                </div>
+            </div>
+        </div>
+{% endblock %}

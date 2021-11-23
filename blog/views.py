@@ -12,6 +12,6 @@ class ArticleListView(ListView):
     template_name = "blog/blog.html"
 
 
-class ArticleDetailsView(DetailView):
+class ArticleDetailView(DetailView):
     model = Blog
     template_name = 'blog/blog_detail.html'
