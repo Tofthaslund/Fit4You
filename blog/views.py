@@ -1,3 +1,17 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+from django.views.generic import ListView, DetailView
+from .models import Blog
 
-# Create your views here.
+from .forms import BlogForm
+
+
+class ArticleListView(ListView):
+    model = Blog
+    template_name = "blog/blog.html"
+
+
+class ArticleDetailsView(DetailView):
+    model = Blog
+    template_name = 'blog/blog_detail.html'
