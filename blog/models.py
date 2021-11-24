@@ -7,7 +7,7 @@ class Blog(models.Model):
     title = models.CharField(max_length=100)
     body = models.TextField()
     date = models.DateField(default=date.today)
-    image = models.ImageField(default='noimage2.png')
+    image = models.ImageField(default='noimage2.jpg')
 
     def __str__(self):
         return self.title
