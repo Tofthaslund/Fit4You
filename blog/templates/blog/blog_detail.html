@@ -36,7 +36,7 @@
                             {% if request.user.is_superuser %}
                             <small>
                                 <a href="{% url 'edit_blog' blog.id %}">Edit</a>
-                                <a class="text-danger font-weight-bold" href="#">Delete</a>
+                                <a class="text-danger font-weight-bold" href="{% url 'delete_blog' blog.id %}">Delete</a>
                             </small>
                             {% endif %}
                        </div>

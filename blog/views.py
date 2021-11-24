@@ -70,3 +70,16 @@ def edit_blog(request, blog_id):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def delete_blog(request, blog_id):
+    # delete blog content. Only for superusers
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only avalible for store owners')
+        return redirect(reverse('blog'))
+
+    blog = get_object_or_404(Blog, pk=blog_id)
+    blog.delete()
+    messages.success(request, 'Blog content has been deleted')
+    return redirect(reverse('blog'))
