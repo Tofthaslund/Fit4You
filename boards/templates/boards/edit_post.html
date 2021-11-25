@@ -29,8 +29,8 @@
                     <form action="post" novalidate>
                         {% csrf_token %}
                         {% include 'includes/form.html' %}
-                        <button type="submit" class="btn btn-info border border-blue rounded">Post Topic</button>
-                        <a href="{% url 'topic_posts' post.topic.board.pk post.topic.pk %}" class="btn btn-info border border-black rounded" role="button">Cancel</a>
+                        <button type="submit" class="btn btn-primary border border-blue rounded">Post Topic</button>
+                        <a href="{% url 'topic_posts' post.topic.board.pk post.topic.pk %}" class="btn btn-primary border border rounded" role="button">Cancel</a>
                     </form>
 
                 </div>
