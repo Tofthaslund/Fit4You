@@ -22,12 +22,11 @@ var style = {
     }
 };
 
-var card = elements.create('card',{style: style});
+var card = elements.create( 'card' , {style: style});
 card.mount('#card-element');
 
 
 // Handle realtime validation errors on card element
-
 card.addEventListener('change', function (event) {
     var errorDiv = document.getElementById('card-errors');
     if (event.error) {
@@ -61,7 +60,7 @@ form.addEventListener('submit', function(ev) {
         'csrfmiddlewaretoken': csrfToken,
         'client_secret': clientSecret,
         'save_info': saveInfo,
-    }
+    };
     var url = '/checkout/cache_checkout_data/';
 
     $.post(url, postData).done(function () {

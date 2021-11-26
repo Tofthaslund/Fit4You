@@ -3,12 +3,12 @@ from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
 
+from profiles.forms import UserProfileForm
 from .forms import OrderForm
 from .models import Order, OrderLineItem
 
 from products.models import Product
-from profiles.models import UserProfile
-from profiles.forms import UserProfileForm
+from profiles.models import UserProfile 
 from bag.context import bag_contents
 
 import stripe
@@ -105,7 +105,7 @@ def checkout(request):
 
         if request.user.is_authenticated:
             try:
-                profile=UserProfile.objects.get(user=request.user)
+                profile = UserProfile.objects.get(user=request.user)
                 order_form = OrderForm(initial={
                     'full_name': profile.user.get_full_name(),
                     'email': profile.user.email,
