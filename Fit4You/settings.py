@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-njud_&p%tk4b7#9i2sui5-+91d_6rcg0@b2ih*l7ts@hv@&n4+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['fit4youms4.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['fit4you-ms4.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -130,9 +130,9 @@ WSGI_APPLICATION = 'Fit4You.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-if 'DATABASE_URL' in os.environ:
+if 'DATEBASES_URL' in os.environ:
     DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+        'default': dj_database_url.parse('DATABASE_URL')
     }
 else:
     DATABASES = {
@@ -141,6 +141,7 @@ else:
             'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
+
 
 
 
