@@ -24,9 +24,11 @@ class Migration(migrations.Migration):
                 ('default_postcode', models.CharField(blank=True, max_length=20, null=True)),
                 ('default_town_or_city', models.CharField(blank=True, max_length=40, null=True)),
                 ('default_street_address1', models.CharField(blank=True, max_length=80, null=True)),
-                ('default_street_address2', models.CharField(blank=True, max_length=80, null=True)),
+                ('default_street_address2', models.CharField(blank=True,max_length=80, null=True)),
                 ('default_county', models.CharField(blank=True, max_length=80, null=True)),
-                ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                ('user', models.OneToOneField(
+                    on_delete=django.db.models.deletion.CASCADE,
+                    to=settings.AUTH_USER_MODEL)),
             ],
         ),
     ]
