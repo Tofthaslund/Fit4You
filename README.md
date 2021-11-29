@@ -41,7 +41,7 @@ As a **site visitor**, I want to...
 -   browse programs by category and type, so that I can quickly find what I am looking for.
 -   sort programs to adjust the order according to my needs.
 -   be able to search for specific programs, to quickly find what I need.
--   access class details, to get more information on the class.
+-   access program details, to get more information on the program.
 -   be able to choose a program, to buy according to my needs.
 -   read information about fitness arts in general, with a view to exploring new programs.
 
@@ -89,7 +89,7 @@ The home page gives a quick glance at the brand of the site and a link to the bo
 This page provides a list of programs which users can buy. There are filters and a sort function to aid in the search. Once they click into a program, it takes them to a page which provides a bit more information about that program and from here, they can add it to their shopping bag.
 
 ### Shopping Bag Page
-Users can add this to their shopping bag and go to checkout or keep adding more programs. The shopping bag shows the total which is calculated automatically based on the programs they add. They can delete the class if no longer required or if they want to add more programs, there is a button which takes them back to book more programs. Once they have added all the programs to the shopping bag, they can go to the Checkout page by clicking on the checkout button link.
+Users can add this to their shopping bag and go to checkout or keep adding more programs. The shopping bag shows the total which is calculated automatically based on the programs they add. They can delete the program if no longer required or if they want to add more programs, there is a button which takes them back to book more programs. Once they have added all the programs to the shopping bag, they can go to the Checkout page by clicking on the checkout button link.
 
 ### Checkout Page
 Here the user can enter their billing details to complete the checkout. If they need to update the shopping bag at any point before billing, they have the option to go back to the main site by clicking on a button. In this page, the users are provided with an option to save their details by logging into the site. If they don't want that option, they can click on Complete Order button to complete the transaction which triggers an automatic mail to their email address provided with the necessary details. If they want to save the details for future, they can register or login from the page or from the navbar.
@@ -136,7 +136,7 @@ Separate to these links, edit & delete links show up for admin on all Program de
 ### Visible to all users
 
 -   **Index page** - Upon entering the site the user is greeted by the main nav, a discount banner, a large image of a personal trainer and her client, a 'Shop Programs' statement and a call-to-action button.
-**Main Nav Menu** - The main menu (collapsed on mobile devices) features dropdown lists where the user can select classes and categories as follows;
+**Main Nav Menu** - The main menu (collapsed on mobile devices) features dropdown lists where the user can select programes and categories as follows;
     -   Programs by price, rating, category or all programs.
     -   Boards
     -   Blog
@@ -160,7 +160,7 @@ Separate to these links, edit & delete links show up for admin on all Program de
       - The program detail page contains more information about a given program, such as a full description, the teacher, what day it takes place etc. It also allows the user to add the program to their shopping bag. Some programs take place on weekdays ('Junior Voice' for example) and with this in mind the user can select their preferred day (Monday-Friday). This function is disabled for program that take place only on one day. The user can click a button to add an item to their bag or keep shopping. If the user adds an item to their bag, a success message pops up with a summary of the bag contents and a link to go to checkout. This popup also features a discount reminder (if the user has only bought one program they will see a message stating 'Add 1 more program to get a 10% discount!') unless the user has already added more than one item to their bag, in this case the reminder will not show up.
 
 **Shopping Bag page**
- - The user can at any point click on the 'bag' link in the main nav to see a full, detailed list of their items. From here the user can update their bag by removing items or increasing the quantity of items. They can also click a button to go to checkout or keep shopping. Again, this page features a discount reminder (if the user has only bought one class they will see a message stating 'You could get a 10% discount by adding 1 more class!') unless the user has already added more than one item to their bag, in this case the reminder will not show up.
+ - The user can at any point click on the 'bag' link in the main nav to see a full, detailed list of their items. From here the user can update their bag by removing items or increasing the quantity of items. They can also click a button to go to checkout or keep shopping. Again, this page features a discount reminder (if the user has only bought one program they will see a message stating 'You could get a 10% discount by adding 1 more program!') unless the user has already added more than one item to their bag, in this case the reminder will not show up.
 
 **Checkout page**
  - The user will be prompted to enter their contact details, billing information and credit card number into the checkout form and see a summary of their order. The user will have the option to 'Create an account' or 'Login' to save this information on their profile. They will also have the option to complete order or adjust bag with buttons at the bottom of the page. If the user leaves a mandatory field (denoted by *) blank, they will be prompted to 'please fill out this field'. If the user enters an invalid card number, they will receive an on-screen message stating the same.
@@ -292,7 +292,7 @@ Official Github Documentation on cloning a repository: [Github - Cloning Repos](
     1. ```python3 manage.py loaddata categories```
     2. ```python3 manage.py loaddata ages```
     3. ```python3 manage.py loaddata settings```
-    4. ```python3 manage.py loaddata classes```
+    4. ```python3 manage.py loaddata programes```
 12. Create a superuser for accessing the django admin view with the following command:
     ```python3 manage.py createsuperuser``` You will be asked for an email address, username and password.
 13. You should be all set and when using the command ```python3 manage.py runserver``` the project should run.
@@ -325,7 +325,7 @@ This project is deployed to Heroku. For the deployment the following steps were/
     1. ```python3 manage.py loaddata categories```
     2. ```python3 manage.py loaddata ages```
     3. ```python3 manage.py loaddata settings```
-    4. ```python3 manage.py loaddata classes```
+    4. ```python3 manage.py loaddata programes```
 11. Create a superuser for the Postgres database for accessing the django admin view with the following command:
     ```python3 manage.py createsuperuser``` You will be asked for an email address, username and password.
 12. Log in to heroku from your terminal ```heroku login```
