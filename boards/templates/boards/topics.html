@@ -39,7 +39,7 @@
                        </thead>
                        <tbody>
                             {% for topic in topics %}
-                                {% url 'topics_post' board.pk topic.pk as topic_url %}
+                                {% url 'topic_posts' board.pk topic.pk as topic_url %}
                                 <tr>
                                 <td>
                                     <p class="mb-0">
