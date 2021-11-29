@@ -263,10 +263,10 @@ All the following tests have been implemented and passed. Where errors occurred 
 -   Delete Profile
 
 ### Blog Management
--   Create Article
--   Read Article
--   Update Article
--   Delete Article
+-   Create Blog
+-   Read Blog
+-   Update Blog
+-   Delete Blog
 
 ### Boards Management
 -   Create Board
@@ -280,10 +280,10 @@ All the following tests have been implemented and passed. Where errors occurred 
 1.  Open web browser.
 2.  Open [Fit4you](https://fit4you-ms4.herokuapp.com/).
 3.  Choose 'Blog' from the main menu.
-4.  Blog articles should be visible.
-5.  Click 'read more' on any article.
+4.  Blog should be visible.
+5.  Click 'read more' on any blog.
 6.  Blog detail page should open.
-7.  Full article should be displayed.
+7.  Full blogs should be displayed.
 8.  Click 'back to blog' button.
 9.  Should be taken to main blog page.
 
@@ -377,7 +377,7 @@ As a **site visitor**, I want to...
 -   be able to choose a program, to book according to my needs.
     -   Each program detail page features an 'add to bag' button to allow users to quickly add that item to their bag.
 -   read information about fitness in general, with a view to exploring new programes / styles.
-    -   The site features a Blog, which contains relevant articles as posted by the school admin. It also features Boards which are moderated by admin but are for users to chat to each other, about fitness related topics.
+    -   The site features a Blog, which contains relevant blogs as posted by the school admin. It also features Boards which are moderated by admin but are for users to chat to each other, about fitness related topics.
 
 ### Manage Shopping Bag and Make Booking
 As a **site visitor**, I want to...
@@ -416,11 +416,11 @@ As a **registered user**, I want to...
 ### Site Management
 As a **site owner**, I want to...
 -   be able to manage the programes, categories, price and availability, so that I have an overview of all program details.
-    -   The 'account' dropdown menu item will display 'add program' and 'post to blog' links for admin only. Edit & delete links will display on program_detail pages for admin only. Edit & delete links will also display on Blog articles for admin only.
+    -   The 'account' dropdown menu item will display 'add program' and 'post to blog' links for admin only. Edit & delete links will display on program_detail pages for admin only. Edit & delete links will also display on Blog blogs for admin only.
 -   view customer conversations & comments, so that I can quickly update the site when required.
     -   The 'Boards' app allows users / customers to chat and post about anything - which in turn is moderated and overseen by admin.
--   create, edit or delete articles to post in the blog, for site users to read.
-    -   Only admin can post new articles to the Blog, which can be done via a link on the 'account' dropdown main nav item. Edit & delete links appear on each blog_detail page for admin only.
+-   create, edit or delete blogs to post in the blog, for site users to read.
+    -   Only admin can post new blogs to the Blog, which can be done via a link on the 'account' dropdown main nav item. Edit & delete links appear on each blog_detail page for admin only.
 -   create, edit or delete boards, topics and posts in the boards app to maintain proper moderation.
     -   Admin retain full moderation over the 'Boards' app with regards to having the sole ability to delete topics & posts deemed inappropriate. Creating/editing/deleting boards is done by admin through the Django administration site.
 
@@ -430,12 +430,12 @@ Besides running through the extensive test cycles documented above the URL from 
 -   Ability to actually add user profile images, so they show up in the Boards app for example.
 
 # Django Testing
-In total, 32 passing Django tests were written and implemented - solely for the 'Articles' and 'Boards' apps. These tests are listed below.
+In total, 32 passing Django tests were written and implemented - solely for the 'Blog' and 'Boards' apps. These tests are listed below.
 
-## Articles App
--   [Forms](articles/test_forms.py)
--   [Models](articles/test_models.py)
--   [Views](articles/test_views.py)
+## blog App
+-   [Forms](blog/test_forms.py)
+-   [Models](blog/test_models.py)
+-   [Views](blog/test_views.py)
 
 ## Boards App
 -   [Boards View](boards/test_boards_view.py)
